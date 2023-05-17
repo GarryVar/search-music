@@ -1,0 +1,46 @@
+import {onLinkResource, stringCorrector} from "./util.js";
+
+
+/*Render search layout*/
+export const searchRender = (item) => {
+  let newElem = document.createElement('div');
+
+
+  newElem.classList.add('search__item');
+  newElem.id = item['master_id'];
+  newElem.innerHTML = `
+        <img src="${item['cover_image']}" class="search__cover" id="cover" alt="${item['title']}" loading="lazy">
+        <p>
+          <a href="${item['resource_url']}">${stringCorrector(item['title']).splice(1, 1)}</a>
+        </p>
+
+        <h3 class="search__title">
+         <a href="${item['resource_url']}">${stringCorrector(item['title']).splice(0, 1)}</a>
+        </h3>`;
+
+
+
+  const link = Array.from(document.querySelectorAll('.search__item a'));
+  link.forEach(i => i.addEventListener('click', onLinkResource));
+
+  return newElem;
+};
+
+
+
+/*Render artist layout*/
+export const renderArtistPage = (item)=> {
+
+  let artistPage = document.createElement('div');
+
+  artistPage.classList.add('artist__page');
+  artistPage.id = item['id'];
+  artistPage.dataset.artist = item['name'];
+  artistPage.innerHTML = `<h1>${item['name']}</h1>
+    <div class="artist__info">
+        <span>Real Name:</span> <span>${item['realname']}</span>
+        <span>Discogs page</span> <a href="${item['uri']}">${item['uri']}</a>
+    </div>
+`;
+  return artistPage;
+}
