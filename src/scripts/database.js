@@ -15,15 +15,13 @@ export function getMusicFromDatabase(evt) {
   fetch(`https://api.discogs.com/database/search?q=${value}&key=${params.token.key}&secret=${params.token.secret}`)
     .then(r => r.json())
     .then(({pagination, results}) => {
+      console.log(results);
 
       if (params.searchResult.classList.contains('artist')) {
         params.searchResult.classList.toggle('artist')
       }
 
-      const images = results.map(i => i['cover_image']);
-
-      let artists = results.filter(i => i['type'] === 'master');
-      artists.forEach(i => params.searchResult.appendChild(searchRender(i)));
+      results.forEach(i => params.searchResult.appendChild(searchRender(i)));
 
     })
 }

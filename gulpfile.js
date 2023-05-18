@@ -78,7 +78,7 @@ export const scripts = () => {
 };
 
 // Images
-// const images = () => {
+// const img = () => {
 //   return gulp.src('src/img')
 //     .pipe(imagemin([
 //       imagemin.optipng({ optimizationLevel: 3 }),
@@ -87,7 +87,7 @@ export const scripts = () => {
 //     ]))
 //     .pipe(gulp.dest('dist/img'))
 // };
-// exports.images = images;
+// exports.img = img;
 
 
 // // Webp
