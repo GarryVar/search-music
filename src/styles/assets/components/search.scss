@@ -83,7 +83,7 @@
 .result-wrap {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-  gap: 10px;
+  gap: 20px;
 
   padding-top: 20px;
   padding-bottom: 20px;
@@ -101,13 +101,13 @@
 
 
   & p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 .search__title {
   font-size: 14px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 
