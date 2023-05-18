@@ -104,6 +104,13 @@
     & img {
       width: 180px;
       height: 180px;
+
+      background-image: url("../../../img/vinyl-placeholder.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #e6eaed;
+
+      border-radius: 2px;
     }
   }
 }
