@@ -4,7 +4,6 @@ import {renderArtistPage} from "./render-util.js";
 
 export const stringCorrector = (string) => string.trim().split('-');
 
-
 export const onSubmitStart = () => {
   params.searchResult.innerHTML = `<h3>Загружаем....</h3>`;
   params.searchResult.innerHTML = '';
