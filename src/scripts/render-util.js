@@ -10,14 +10,10 @@ export const searchRender = (item) => {
   newElem.id = item['master_id'];
   newElem.innerHTML = `
         <img src="${item['cover_image']}" class="search__cover" id="cover" alt="${item['title']}" loading="lazy">
-        <p>
-          <a href="${item['resource_url']}">${stringCorrector(item['title']).splice(1, 1)}</a>
-        </p>
-
-        <h3 class="search__title">
-         <a href="${item['resource_url']}">${stringCorrector(item['title']).splice(0, 1)}</a>
-        </h3>`;
-
+        <span>
+          <a class="search__master" href="${item['resource_url']}">${stringCorrector(item['title']).splice(1, 1)}</a>
+        </span>
+        <span><a class="search__title" href="${item['resource_url']}">${stringCorrector(item['title']).splice(0, 1)}</a></span>`;
 
 
   const link = Array.from(document.querySelectorAll('.search__item a'));
@@ -27,9 +23,8 @@ export const searchRender = (item) => {
 };
 
 
-
 /*Render artist layout*/
-export const renderArtistPage = (item)=> {
+export const renderArtistPage = (item) => {
 
   let artistPage = document.createElement('div');
 

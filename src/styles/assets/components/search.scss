@@ -25,7 +25,7 @@
   width: 100%;
   height: 50px;
 
-  background-color: #1d1d1d;
+  background-color: $mainColor;
 }
 
 .search__form {
@@ -36,7 +36,6 @@
   width: 540px;
 
   overflow: hidden;
-  //border: 1px solid #616161;
   background-color: #fff;
   border-radius: 4px;
 
@@ -49,7 +48,7 @@
     padding-left: 10px;
     border: none;
 
-    color: #616161;
+    color: $mainColor;
 
     font-family: inherit;
     font-size: 15px;
@@ -65,13 +64,8 @@
     background-color: transparent;
   }
 
-  & button[type="submit"] {
-    fill: #616161;
-  }
-
-  & button[type="submit"]:hover,
-  & button[type="submit"]:focus {
-    background-color: #4444;
+  & button[type="submit"] svg {
+    fill: $mainColor;
   }
 
   & button[type="submit"]:hover svg,
@@ -85,37 +79,23 @@
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   row-gap: 20px;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  border-top: 1px solid lightgray;
-
-  //max-height: 480px;
-  //overflow: auto;
+  padding: 20px;
 }
 
 .search__item {
   display: grid;
   gap: 5px;
   grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
-
-
-  & p {
-    font-size: 16px;
-    & a {
-      color: #666666;
-    }
-  }
 }
 
 .search__title {
   font-size: 14px;
   text-transform: capitalize;
+  font-weight: 100;
+}
 
-  & a {
-    font-weight: 100;
-    color: #3e3e3e;
-  }
+.search__link {
+  font-size: 16px;
 }
 
 
