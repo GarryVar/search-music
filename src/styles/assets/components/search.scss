@@ -36,16 +36,20 @@
   width: 540px;
 
   overflow: hidden;
-  background-color: #363636;
-  border: 1px solid #515151;
+  border: 1px solid #616161;
 
   border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border-color: #888;
+  }
 
   & input[type="search"] {
     padding-left: 10px;
     border: none;
 
-    color: lightgray;
+    color: #616161;
 
     font-family: inherit;
     font-size: 15px;
@@ -54,14 +58,25 @@
     background-color: transparent;
   }
 
+
   & button[type="submit"] {
     padding: 0 15px 0 15px;
     border: none;
     background-color: transparent;
   }
 
-  & button[type="submit"]:hover svg {
-    fill: #b93529;
+  & button[type="submit"] {
+    fill: #616161;
+  }
+
+  & button[type="submit"]:hover,
+  & button[type="submit"]:focus {
+    background-color: #4444;
+  }
+
+  & button[type="submit"]:hover svg,
+  & button[type="submit"]:focus svg {
+    fill: #616161;
   }
 }
 
