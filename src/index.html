@@ -9,27 +9,38 @@
   <title>Document</title>
   <link rel="stylesheet" href="styles/index.min.css">
 </head>
-<body>
-<div class="search">
-  <div class="search__layout-wrap">
-    <h1>from database sound</h1>
-    <!--    Search form   -->
-    <form class="search__form">
-      <label for="search" class="visually-hidden">Найти</label>
-      <input type="search" name="search" placeholder="Найти" id="search">
-      <button type="submit">
+<body class="page">
+<div class="page__layout">
+
+  <header class="page__header">
+
+
+    <div class="search">
+      <div class="search__layout-wrap">
+        <h1>from database sound</h1>
+        <!--    Search form   -->
+        <form class="search__form">
+          <label for="search" class="visually-hidden">Найти</label>
+          <input type="search" name="search" placeholder="Найти" id="search">
+          <button type="submit">
         <span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lightgray" class="bi bi-search" viewBox="0 0 16 16"> <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/> </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lightgray" class="bi bi-search"
+               viewBox="0 0 16 16"> <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/> </svg>
         </span>
-      </button>
-    </form>
-  </div>
-<!--    Search result -->
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+  <aside class="page__aside"></aside>
+  <main class="page__main">
 
+
+    <!--    Search result -->
     <div class="result-wrap container"></div>
-
+  </main>
 </div>
-
 <script type="module" src="scripts/index.js"></script>
 </body>
 </html>
