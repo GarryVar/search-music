@@ -11,8 +11,9 @@ import terser from 'gulp-terser';
 import nodeSass from 'sass';
 import gsass from 'gulp-sass';
 const sass = gsass(nodeSass);
+import imagemin from 'gulp-imagemin';
+import postcss from 'postcss';
 
-  // imagemin = require('gulp-imagemin'),
   // webpi = require('gulp-webp');
 
 
@@ -27,7 +28,7 @@ export const copy = () => {
   return gulp.src([
     'src/fonts/**/*.{woff, woff2}',
     'src/img/**',
-    'src/scripts/**/*.js',
+    'src/*.js',
     'src/*.ico,',
     'src/*.png',
     'src/*.svg',
@@ -53,7 +54,7 @@ export const css = () => {
     // .pipe(plumber())
 
     .pipe(sass())
-    // .pipe(postcss([autoprefixer()]))
+    .pipe(autoprefixer())
     .pipe(csso())
     .pipe(rename({ suffix: '.min' }))
     // .pipe(sourcemaps.write('.'))
@@ -82,16 +83,15 @@ export const scripts = () => {
 };
 
 // Images
-// const img = () => {
-//   return gulp.src('src/img')
-//     .pipe(imagemin([
-//       imagemin.optipng({ optimizationLevel: 3 }),
-//       imagemin.mozjpeg({ progressive: true }),
-//       imagemin.svgo()
-//     ]))
-//     .pipe(gulp.dest('dist/img'))
-// };
-// exports.img = img;
+export const img = () => {
+  return gulp.src('src/img')
+    .pipe(imagemin([
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.mozjpeg({ progressive: true }),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest('dist/img'))
+};
 
 
 // // Webp

@@ -1,5 +1,5 @@
 {
-  "name": "pi",
+  "name": "search-music",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -22,5 +22,11 @@
     "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.1.0",
     "sass": "^1.62.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
+    "postcss": "^8.4.23"
   }
 }
