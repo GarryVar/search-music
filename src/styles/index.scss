@@ -1,6 +1,15 @@
+/*Setting styles*/
 @import "./assets/var.scss";
 @import "./assets/container.scss";
 @import "./assets/main.scss";
+
+/*Layout*/
+@import "./assets/components/page.scss";
+@import "./assets/components/header.scss";
+@import "./assets/components/main.scss";
+
+/*Components*/
+@import "./assets/components/result.scss";
 @import "./assets/components/search.scss";
 @import "./assets/components/artist.scss";
 

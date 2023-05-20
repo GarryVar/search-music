@@ -1,0 +1,25 @@
+.page__layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.page__main {
+  grid-area: main;
+}
+
+.page__header {
+  position: sticky;
+  top: 0;
+  background-color: $mainColor;
+
+  grid-area: header;
+}
+
+@media (min-width: 768px) {
+  .page__layout {
+    gap: 10px;
+  }
+}
