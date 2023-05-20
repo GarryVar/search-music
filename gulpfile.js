@@ -28,7 +28,11 @@ export const copy = () => {
     'src/fonts/**/*.{woff, woff2}',
     'src/img/**',
     'src/scripts/**/*.js',
-    'src/*.ico'
+    'src/*.ico,',
+    'src/*.png',
+    'src/*.svg',
+    'src/*.xml',
+    'src/site.webmanifest'
   ],
     { base: 'src' }
   )

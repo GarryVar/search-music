@@ -6,7 +6,7 @@ export const params = {
     key: 'vDFrSJVinLBdseXePtFc'
   },
   form : document.querySelector('.search__form'),
-  searchResult : document.querySelector('.result-wrap'),
+  searchResult : document.querySelector('.result__layout'),
 };
 
 export function getMusicFromDatabase(evt) {
