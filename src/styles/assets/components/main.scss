@@ -26,8 +26,8 @@
 }
 
 .main__content {
-  min-height: 100vh;
   grid-area: content;
+  min-height: 100vh;
 }
 
 @media(min-width: 768px) {
@@ -39,13 +39,8 @@
 
   .main__aside {
     position: static;
-    min-height: 100vh ;
-    max-height: auto;
     z-index: -1;
-  }
-
-  .main__content {
-    height: 100vh;
+    min-height: 100vh;
   }
 }
 

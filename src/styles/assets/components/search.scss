@@ -6,10 +6,6 @@
   text-align: center;
 }
 
-.search__layout {
-  width: 100%;
-}
-
 .search__form {
   display: grid;
   grid-template-columns: 1fr min-content;
@@ -55,8 +51,6 @@
     fill: #616161;
   }
 }
-
-
 
 .search__item {
   display: grid;
