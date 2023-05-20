@@ -7,6 +7,7 @@ export const params = {
   },
   form : document.querySelector('.search__form'),
   searchResult : document.querySelector('.result__layout'),
+  aside: document.querySelector('.aside')
 };
 
 export function getMusicFromDatabase(evt) {
@@ -22,6 +23,5 @@ export function getMusicFromDatabase(evt) {
       }
 
       results.forEach(i => params.searchResult.appendChild(searchRender(i)));
-
     })
 }
