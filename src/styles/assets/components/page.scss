@@ -4,6 +4,8 @@
     "header"
     "main"
     "footer";
+
+  background-color: $mainBg;
 }
 
 .page__main {
@@ -13,13 +15,18 @@
 .page__header {
   position: sticky;
   top: 0;
-  background-color: $mainColor;
 
+  background-color: $mainBg;
   grid-area: header;
 }
 
 @media (min-width: 768px) {
   .page__layout {
     gap: 10px;
+  }
+
+  .page__header {
+    background-color: $mainColor;
+    box-shadow: 0 3px 0px #9c9c9c;
   }
 }

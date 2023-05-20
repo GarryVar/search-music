@@ -14,6 +14,11 @@ export const onSubmitError = () => {
   params.searchResult.innerHTML = '';
 };
 
+export const typeLangth = (arr, type) => {
+  let db = arr.filter(i => i['type'] === type).map(type => type);
+  return db.length;
+}
+
 export async function onLinkResource(evt) {
   if (evt.target.tagName === 'A') {
     evt.preventDefault();
