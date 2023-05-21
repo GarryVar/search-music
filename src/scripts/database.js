@@ -1,4 +1,5 @@
 import {renderArtistPage, searchRender} from "./render-util.js";
+import {typeLangth} from "./util.js";
 
 export const params = {
   token: {
@@ -22,6 +23,18 @@ export function getMusicFromDatabase(evt) {
         params.searchResult.classList.toggle('artist')
       }
 
+      const type = {
+        artistLength: typeLangth(results, 'artist'),
+        releaseLength: typeLangth(results, 'release'),
+        masterLength: typeLangth(results, 'master')
+      }
+
+
+      params.aside.innerHTML = `
+        <div>Artists:<span>${type.artistLength}</span></div>
+        <div>Releases:<span>${type.releaseLength}<span></div>
+        <div>Masters:<span>${type.masterLength}</span></div>
+`;
       results.forEach(i => params.searchResult.appendChild(searchRender(i)));
     })
 }
