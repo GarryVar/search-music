@@ -1,0 +1,45 @@
+.stat__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.stat__type {
+  display: flex;
+  align-self: center;
+  padding: 10px;
+  color: $link;
+  border-radius: 4px;
+
+  span {
+    color: $link;
+  }
+}
+
+.stat__icon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+
+  background-color: $mainColor;
+}
+
+.stat__text {
+  display: none;
+  margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .stat__content {
+    display: block;
+  }
+
+  .stat__icon {
+    margin-right: 0;
+  }
+
+  .stat__text {
+    margin-right: auto;
+    display: block;
+  }
+}

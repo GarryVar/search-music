@@ -8,7 +8,7 @@ export const params = {
   },
   form : document.querySelector('.search__form'),
   searchResult : document.querySelector('.result__layout'),
-  aside: document.querySelector('.aside')
+  aside: document.querySelector('.stat__content')
 };
 
 export function getMusicFromDatabase(evt) {
@@ -31,10 +31,24 @@ export function getMusicFromDatabase(evt) {
 
 
       params.aside.innerHTML = `
-        <div>Artists:<span>${type.artistLength}</span></div>
-        <div>Releases:<span>${type.releaseLength}<span></div>
-        <div>Masters:<span>${type.masterLength}</span></div>
-`;
+        <div class="stat__type">
+            <div class="stat__icon"></div>
+            <p class="stat__text">Artists:</p>
+            <div class="stat__count">${type.artistLength}</div>
+        </div>
+
+         <div class="stat__type">
+            <div class="stat__icon"></div>
+            <p class="stat__text">Masters:</p>
+            <div class="stat__count">${type.masterLength}</div>
+         </div>
+
+        <div class="stat__type">
+            <div class="stat__icon"></div>
+            <p class="stat__text">Releases:</p>
+            <div class="stat__count">${type.releaseLength}<div>
+        </div>`;
+
       results.forEach(i => params.searchResult.appendChild(searchRender(i)));
     })
 }

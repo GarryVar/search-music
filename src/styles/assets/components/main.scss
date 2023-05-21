@@ -50,37 +50,8 @@
     z-index: -1;
     min-height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
     border: 1px solid $border;
     border-radius: 3px;
-
-    div {
-      position: relative;
-
-      display: flex;
-      justify-content: space-between;
-      padding: 15px 20px 15px 20px;
-      color: $link;
-      border-bottom: 1px solid $border;
-
-      span {
-        color: $link;
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 15px;
-        height: 15px;
-        background-color: $border;
-      }
-    }
   }
 }
 
