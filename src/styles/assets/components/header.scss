@@ -7,7 +7,7 @@
 
   height: 160px;
 
-  & a svg {
+  & a svg{
     fill: $mainColor;
   }
 }
@@ -16,15 +16,23 @@
   width: 100%;
 }
 
+
+@media (min-width: 640px) {
+  .header__layout {
+    flex-direction: row;
+    height: 80px;
+  }
+}
+
+
 @media(min-width: 768px) {
   .header__layout {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
 
     & a svg {
-      fill: #ffffff;
+      fill: white;
     }
   }
 }
