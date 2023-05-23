@@ -1,7 +1,7 @@
 import {database, searchParams} from "./database.js";
 import {renderArtistPage, searchRender} from "./render-util.js";
 
-const {form, aside, searchResult, statContainers, types} = database;
+const {aside, searchResult, statContainers, types} = database;
 
 
 export const stringCorrector = (string) => string.trim().split('-');
@@ -18,11 +18,7 @@ export const onSubmitError = () => {
   searchResult.innerHTML = '';
 };
 
-
-export const typeLangth = (arr, type) => {
-  let db = arr.filter(i => i['type'] === type).map(type => type);
-  return db.length;
-};
+export const typeLangth = (arr, type) => arr.filter(i => i['type'] === type).map(type => type).length;
 
 
 export function getMusicFromDatabase(evt) {
@@ -37,6 +33,8 @@ export function getMusicFromDatabase(evt) {
       if (searchResult.classList.contains('artist')) {
         searchResult.classList.toggle('artist')
       }
+
+      console.log(results);
 
       getTypesCount(statContainers, results, types);
       results.forEach(i => searchResult.appendChild(searchRender(i)));
@@ -75,7 +73,6 @@ export async function onLinkResource(evt) {
 export async function onSubmit(evt) {
   evt.preventDefault();
   onSubmitStart();
-
   await getMusicFromDatabase(evt);
 };
 

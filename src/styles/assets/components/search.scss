@@ -81,16 +81,6 @@
     }
   }
 
-  .search__form {
-    & button[type="submit"] svg {
-      fill: $border;
-    }
-
-    & button[type="submit"] svg:hover {
-      fill: $mainColor;
-    }
-  }
-
   ::placeholder {
     font-weight: normal;
     font-size: 15px;

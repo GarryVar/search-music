@@ -1,6 +1,4 @@
-import {database} from "./database.js";
 import {onSubmit} from "./util.js";
-
-database.form.addEventListener('submit', onSubmit);
+document.querySelector('form').addEventListener('submit', onSubmit);
 
 
