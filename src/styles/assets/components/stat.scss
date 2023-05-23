@@ -1,13 +1,15 @@
 .stat__content {
   display: flex;
   align-items: center;
+
   width: 100%;
 }
 
 .stat__type {
   display: flex;
   align-self: center;
-  padding: 10px;
+
+  padding: 5px;
   color: $link;
   border-radius: 4px;
 
@@ -21,7 +23,9 @@
   width: 20px;
   height: 20px;
 
-  background-color: $mainColor;
+  & svg {
+    fill: $mainColor;
+  }
 }
 
 .stat__text {
@@ -32,6 +36,11 @@
 @media (min-width: 768px) {
   .stat__content {
     display: block;
+  }
+
+  .stat__type:focus,
+  .stat__type:hover {
+    background-color: $active;
   }
 
   .stat__icon {

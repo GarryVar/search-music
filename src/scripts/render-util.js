@@ -25,6 +25,8 @@ export const searchRender = (item) => {
 
 /*Render artist layout*/
 export const renderArtistPage = (item) => {
+  const urlResource = window;
+  console.log(urlResource);
 
   let artistPage = document.createElement('div');
 
@@ -33,7 +35,7 @@ export const renderArtistPage = (item) => {
   artistPage.dataset.artist = item['name'];
   artistPage.innerHTML = `<h1>${item['name']}</h1>
     <div class="artist__info">
-        <span>Real Name:</span> <span>${item['realname']}</span>
+        <div class="artist__profile">${item['profile']}</div>
         <span>Discogs page</span> <a href="${item['uri']}">${item['uri']}</a>
     </div>
 `;

@@ -38,6 +38,13 @@
   border-radius: 3px;
 }
 
+@media (min-width: 640px) {
+  .main__aside {
+    top: 80px;
+  }
+}
+
+
 @media(min-width: 768px) {
   .main__layout {
     grid-template-columns: 240px 1fr;
