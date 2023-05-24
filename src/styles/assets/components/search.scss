@@ -55,6 +55,10 @@
   grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
 }
 
+.search__master {
+  font-weight: bold;
+}
+
 .search__title {
   font-size: 14px;
   text-transform: capitalize;
