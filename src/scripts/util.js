@@ -24,9 +24,14 @@ export const typeLangth = (arr, type) => arr.filter(i => i['type'] === type).map
 export function getMusicFromDatabase(evt) {
   const value = evt.target.elements['search'].value;
 
-  const {token: {key, secret}} = searchParams;
+  const {
+    url,
+    token: {key, secret},
+    param: {keyParam, secretParam, searchParam}
+  } = searchParams;
 
-  fetch(`https://api.discogs.com/database/search?q=${value}&key=${key}&secret=${secret}`)
+  let searchPostStringParam = `${url}${searchParam}${value}${keyParam}${key}${secretParam}${secret}`;
+  fetch(searchPostStringParam)
     .then(r => r.json())
     .then(({pagination, results}) => {
 

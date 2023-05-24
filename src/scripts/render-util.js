@@ -7,7 +7,6 @@ export const searchRender = (item) => {
 
 
   newElem.classList.add('search__item');
-  newElem.id = item['master_id'];
   newElem.innerHTML = `
         <img src="${item['cover_image']}" class="search__cover" id="cover" alt="${item['title']}" loading="lazy">
         <span>
@@ -25,8 +24,6 @@ export const searchRender = (item) => {
 
 /*Render artist layout*/
 export const renderArtistPage = (item) => {
-  const urlResource = window;
-  console.log(urlResource);
 
   let artistPage = document.createElement('div');
 
