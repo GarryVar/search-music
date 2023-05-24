@@ -31,7 +31,6 @@ export function getMusicFromDatabase(evt) {
   } = searchParams;
 
   let searchPostStringParam = `${url}${searchParam}${value}${keyParam}${key}${secretParam}${secret}`;
-
   fetch(searchPostStringParam)
     .then(r => r.json())
     .then(({pagination, results}) => {
