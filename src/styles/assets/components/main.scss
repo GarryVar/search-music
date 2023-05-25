@@ -53,6 +53,10 @@
   }
 
   .main__aside {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, min-content);
+
     position: static;
     z-index: -1;
     min-height: 100vh;

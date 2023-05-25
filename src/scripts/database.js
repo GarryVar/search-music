@@ -1,5 +1,5 @@
 export const searchParams = {
-  url: `https://api.discogs.com/database/`,
+  url: 'https://api.discogs.com/database/',
   token: {
     secret: 'mNHcAvOinUcwHakAVnJbLZDKTHMXfogm',
     key: 'vDFrSJVinLBdseXePtFc'
@@ -7,7 +7,7 @@ export const searchParams = {
   param: {
     keyParam: `&key=`,
     searchParam: `search?q=`,
-    secretParam: `&secret=`
+    secretParam: `&secret=`,
   }
 };
 
@@ -16,4 +16,5 @@ export const database = {
   types: ['artist', 'release', 'master'],
   statContainers: Array.from(document.querySelectorAll('.js-stat')),
 };
+
 

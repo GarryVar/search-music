@@ -53,6 +53,10 @@
   display: grid;
   gap: 5px;
   grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
+  padding: 10px;
+
+  border: 1px solid $border;
+  border-radius: 3px;
 }
 
 .search__master {
