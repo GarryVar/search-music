@@ -1,8 +1,42 @@
 .result__layout {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 30px;
+  gap: 10px;
 
   max-height: 100vh;
   overflow: auto;
+}
+
+.result__item {
+  display: grid;
+  gap: 5px;
+  grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
+  padding: 10px;
+}
+
+.result__cover {
+  background-image: url("../../../img/master-placeholder.svg  ");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.result__master {
+  font-weight: bold;
+}
+
+.result__title {
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 100;
+}
+
+.result__link {
+  font-size: 16px;
+}
+
+@media(min-width: $tabletWidth) {
+  .result__cover {
+    width: 180px;
+    height: 180px;
+  }
 }

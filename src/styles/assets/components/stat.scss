@@ -1,20 +1,23 @@
 .stat__content {
   display: flex;
   align-items: center;
-
-  width: 100%;
+  border-right: 1px solid $border;
 }
 
 .stat__type {
   display: flex;
-  align-self: center;
+  align-items: center;
 
   padding: 5px;
-  color: $link;
-  border-radius: 4px;
+  color: $mainColor;
 
   span {
     color: $link;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $white;
   }
 }
 
@@ -33,14 +36,10 @@
   margin-left: 10px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tabletWidth) {
   .stat__content {
     display: block;
-  }
-
-  .stat__type:focus,
-  .stat__type:hover {
-    background-color: $active;
+    border: none;
   }
 
   .stat__icon {
