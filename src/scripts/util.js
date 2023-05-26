@@ -78,7 +78,7 @@ export async function onLinkResource(evt) {
 export async function onSubmit(evt) {
   evt.preventDefault();
   onSubmitStart();
-  await getMusicFromDatabase(evt);
+  getMusicFromDatabase(evt);
 };
 
 
