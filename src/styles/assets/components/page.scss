@@ -4,8 +4,7 @@
     "header"
     "main"
     "footer";
-
-  background-color: $mainBg;
+  background-color: $white-bg;
 }
 
 .page__main {
@@ -16,17 +15,19 @@
   position: sticky;
   top: 0;
 
-  background-color: $mainBg;
+  background-color: $header;
   grid-area: header;
+  z-index: 10;
+  border-bottom: 1px solid $border;
 }
 
-@media (min-width: 768px) {
-  .page__layout {
-    gap: 10px;
+
+@media (min-width: $tabletWidth) {
+  .page__header {
+    border-bottom: 1px solid $border;
   }
 
-  .page__header {
-    background-color: $mainColor;
-    box-shadow: 0 3px 0px #9c9c9c;
+  .page__main {
+    border-top: 1px solid $white;
   }
 }

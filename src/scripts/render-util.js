@@ -1,4 +1,4 @@
-import {onLinkResource, stringCorrector} from "./util.js";
+import { onLinkResource, stringCorrector } from "./util.js";
 
 
 /*Render search layout*/
@@ -6,13 +6,13 @@ export const searchRender = (item) => {
   let newElem = document.createElement('div');
 
 
-  newElem.classList.add('search__item');
+  newElem.classList.add('result__item');
   newElem.innerHTML = `
-        <img src="${item['cover_image']}" class="search__cover" id="cover" alt="${item['title']}" loading="lazy">
+        <img src="${item['cover_image']}" class="result__cover" id="cover" alt="${item['title']}" loading="lazy">
         <span>
-          <a class="search__master" href="${item['resource_url']}">${stringCorrector(item['title']).splice(1, 1)}</a>
+          <a class="result__master" href="${item['resource_url']}">${stringCorrector(item['title']).splice(1, 1)}</a>
         </span>
-        <span><a class="search__title" href="${item['resource_url']}">${stringCorrector(item['title']).splice(0, 1)}</a></span>`;
+        <span><a class="result__title" href="${item['resource_url']}">${stringCorrector(item['title']).splice(0, 1)}</a></span>`;
 
 
   const link = Array.from(document.querySelectorAll('.search__item a'));
