@@ -6,56 +6,58 @@
     "content";
   grid-template-rows: 50px 1fr;
 
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50px;
-    width: 100%;
-    height: 1px;
-    background-color: $white;
-  }
+  min-height: 600px;
 }
 
 .main__aside,
 .main__content {
-  padding: 10px;
-  background-color: $white-bg;
+  background-color: $light-bg;
 }
 
 .main__aside {
   position: fixed;
-  top: 161px;
+  top: 160px;
   left: 0;
 
-  grid-area: aside;
-
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  grid-area: aside;
+  justify-content: center;
 
   width: 100%;
   height: 50px;
-  border-top: 1px solid $white;
-  border-bottom: 1px solid $border;
 
   z-index: 1;
 }
 
 .main__content {
   position: relative;
-
   grid-area: content;
-  min-height: 100vh;
-  border-radius: $sm-radius;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 200px;
+    height: 200px;
+    background-image: url('../../../img/master-placeholder.svg');
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+  }
 }
 
 @media (min-width: $sm-tabletWidth) {
   .main__aside {
-    top: 81px;
+    top: 80px;
+    padding-left: 25px;
   }
 
-  .main__layout {
-    gap: 0;
+  .main__stat {
+    min-height: min-content;
   }
 }
 
@@ -66,23 +68,31 @@
     grid-template-columns: 180px 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "aside content";
-  }
 
-  .main__aside {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(3, min-content);
-
-    position: static;
-    z-index: 0;
-    min-height: 100vh;
-
-    border: none;
-    border-right: 1px double $border;
-    border-radius: $sm-radius
+    gap: 20px;
   }
 
   .main__content {
-    border-left: 1px solid $white;
+    border-left: 1px solid $border;
+  }
+
+  .main__aside {
+    position: relative;
+    top: 30px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, min-content);
+    height: 100%;
+    padding-left: 10px;
+  }
+
+  .main__stat {
+    position: sticky;
+    width: 100%;
+    top: 100px;
+  }
+
+  .main__content {
+    position: relative;
   }
 }

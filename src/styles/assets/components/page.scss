@@ -4,7 +4,9 @@
     "header"
     "main"
     "footer";
-  background-color: $white-bg;
+  background-color: $light-bg;
+
+  min-height: 300px;
 }
 
 .page__main {
@@ -15,19 +17,13 @@
   position: sticky;
   top: 0;
 
-  background-color: $header;
+  background-color: $light-bg;
   grid-area: header;
   z-index: 10;
-  border-bottom: 1px solid $border;
 }
 
-
-@media (min-width: $tabletWidth) {
-  .page__header {
-    border-bottom: 1px solid $border;
-  }
-
-  .page__main {
-    border-top: 1px solid $white;
+@media(min-width: $tabletWidth) {
+  .page__layout {
+    row-gap: 20px;
   }
 }
