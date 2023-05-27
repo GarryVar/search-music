@@ -7,8 +7,7 @@
 
   overflow: hidden;
   background-color: $light-bg;
-  box-shadow: 0 0 0 1px #bababa, 0 0 0 2px white;
-  border-radius: $sm-radius;
+  box-shadow: 0 1px 0 0 $border;
 
   &:focus,
   &:focus-within {

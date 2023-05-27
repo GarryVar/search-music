@@ -21,6 +21,7 @@
     display: grid;
     grid-template-columns: 180px 1fr;
     height: 80px;
+    gap: 20px;
 
     & a {
       display: flex;
