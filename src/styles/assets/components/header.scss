@@ -33,3 +33,10 @@
     margin-top: 15px;
   }
 }
+
+@media(min-width: $tabletWidth) {
+  .header__search {
+    width: 436px;
+    justify-self: center;
+  }
+}
