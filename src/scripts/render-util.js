@@ -5,7 +5,7 @@ import { onLinkResource, stringCorrector } from "./util.js";
 export const searchRender = item => {
   let newElem = document.createElement('li');
 
-newElem.dataset['type'] = item['type'];
+  newElem.dataset['type'] = item['type'];
   newElem.classList.add('result__item');
   newElem.id = `${item['type']}-${item['id']}`;
   newElem.innerHTML = `
