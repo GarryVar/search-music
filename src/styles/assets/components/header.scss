@@ -8,25 +8,31 @@
   height: 160px;
 
   & a svg {
-    fill: $sm-tabletWidth;
+    fill: $mainColor;
   }
 }
 
 .header__search {
   width: 100%;
-  border: 1px solid $border;
 }
 
 @media(min-width: $sm-tabletWidth) {
   .header__layout {
     display: grid;
     grid-template-columns: 180px 1fr;
-
     height: 80px;
+    gap: 20px;
 
     & a {
       display: flex;
       justify-content: start;
     }
+  }
+}
+
+@media(min-width: $tabletWidth) {
+  .header__search {
+    width: 540px;
+    justify-self: end;
   }
 }

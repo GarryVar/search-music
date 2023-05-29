@@ -1,17 +1,23 @@
-.result__layout {
+.result__list {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 180px));
+  justify-content: center;
 
-  max-height: 100vh;
+  row-gap: 20px;
   overflow: auto;
+  background-color: $light-bg;
+  z-index: 5;
 }
 
 .result__item {
   display: grid;
   gap: 5px;
   grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
+  justify-content: center;
   padding: 10px;
+
+  box-shadow: 0 1px 0 0 $border;
 }
 
 .result__cover {
@@ -35,8 +41,21 @@
 }
 
 @media(min-width: $tabletWidth) {
+  .result__list {
+    padding: 30px 20px;
+    row-gap: 20px;
+    border: none;
+  }
+
   .result__cover {
     width: 180px;
     height: 180px;
+  }
+}
+
+@media(min-width: $desktopWidth) {
+  .result__list {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    padding-right: 0;
   }
 }

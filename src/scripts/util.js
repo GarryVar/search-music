@@ -23,6 +23,7 @@ export const typeLangth = (arr, type) => arr.filter(i => i['type'] === type).map
 export const getTypesCount = (arr, result, type) => arr.forEach((i, ind) => {
   i.textContent = typeLangth(result, type[ind]);
   i.parentElement.dataset.type = type[ind];
+  i.parentElement.title = `${type[ind]}: ${typeLangth(result, type[ind])}`;
 });
 
 
@@ -40,12 +41,14 @@ export function getMusicFromDatabase(evt) {
     .then(r => r.json())
     .then(({ pagination, results }) => {
 
+      console.log(results);
+      console.log(pagination);
       if (searchResult.classList.contains('artist')) {
         searchResult.classList.toggle('artist')
       }
 
       getTypesCount(statContainers, results, types);
-      results.forEach(i => searchResult.appendChild(searchRender(i)))
+      results.forEach(i => searchResult.appendChild(searchRender(i)));
     })
 };
 

@@ -12,7 +12,7 @@ export const searchParams = {
 };
 
 export const database = {
-  searchResult : document.querySelector('.result__layout'),
+  searchResult : document.querySelector('.result__list'),
   types: ['artist', 'release', 'master'],
   statContainers: Array.from(document.querySelectorAll('.js-stat')),
 };

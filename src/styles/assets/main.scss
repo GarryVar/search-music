@@ -19,7 +19,6 @@ body {
   margin: 0;
   padding: 0;
   min-width: 320px;
-  min-height: 100vh;
 
   font-family: 'Questrial', sans-serif;
 }
@@ -82,8 +81,4 @@ button {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-main {
-  min-height: 100vh;
 }

@@ -1,7 +1,6 @@
 .stat__content {
   display: flex;
   align-items: center;
-  border-right: 1px solid $border;
 }
 
 .stat__type {
@@ -17,7 +16,7 @@
 
   &:focus,
   &:hover {
-    background-color: $white;
+    background-color: $light-bg;
   }
 }
 

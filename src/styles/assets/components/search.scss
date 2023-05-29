@@ -6,9 +6,9 @@
   width: 100%;
 
   overflow: hidden;
-  background-color: $white-bg;
-
-  border: 1px solid $white;
+  border-radius: $sm-radius;
+  background-color: $light-bg;
+  box-shadow: 0 0 0 1px $border;
 
   &:focus,
   &:focus-within {
@@ -23,14 +23,14 @@
     color: $mainColor;
     font-family: inherit;
     font-size: 18px;
-    background-color: $white-bg;
+    background-color: $light-bg;
   }
 
   & button[type="submit"] {
     padding: 0 15px 0 15px;
 
     border: none;
-    background-color: $white-bg;
+    background-color: $light-bg;
   }
 
   & button[type="submit"] svg {
