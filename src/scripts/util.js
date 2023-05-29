@@ -42,13 +42,13 @@ export function getMusicFromDatabase(evt) {
     .then(({ pagination, results }) => {
 
       console.log(results);
-
+      console.log(pagination);
       if (searchResult.classList.contains('artist')) {
         searchResult.classList.toggle('artist')
       }
 
       getTypesCount(statContainers, results, types);
-      results.forEach(i => searchResult.appendChild(searchRender(i)))
+      results.forEach(i => searchResult.appendChild(searchRender(i)));
     })
 };
 
