@@ -92,15 +92,6 @@ export const img = () => {
 };
 
 
-// // Webp
-// const webp = () => {
-//   return gulp.src('src/img')
-//     .pipe(webpi({ quality: 50 }))
-//     .pipe(gulp.dest('dist/img'))
-// };
-// exports.webp = webp;
-
-
 // Server
 export const server = () => {
   sync.init({
