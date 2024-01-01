@@ -14,8 +14,6 @@ const sass = gsass(nodeSass);
 import imagemin from 'gulp-imagemin';
 import postcss from 'postcss';
 
-  // webpi = require('gulp-webp');
-
 
 // Clean
 export const clean = () => {
