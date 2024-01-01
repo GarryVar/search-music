@@ -49,13 +49,13 @@ export const refresh = done => {
 // Css
 export const css = () => {
   return gulp.src('src/styles/index.scss')
-    // .pipe(plumber())
+  
 
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(csso())
     .pipe(rename({ suffix: '.min' }))
-    // .pipe(sourcemaps.write('.'))
+    
     .pipe(gulp.dest('dist/styles'))
     .pipe(reload({ stream: true }))
 };
